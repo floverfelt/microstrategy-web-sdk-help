@@ -1,0 +1,9 @@
+<framework>
+  <pages>
+      <page name = "welcome">
+          <addons>
+            <addon XMLmerge_id="50" name="addons.bypassWelcomePage"/>
+          </addons>
+      </page>
+  </pages>
+</framework>

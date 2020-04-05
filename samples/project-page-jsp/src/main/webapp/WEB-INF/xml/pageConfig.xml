@@ -1,0 +1,9 @@
+<framework>
+  <pages>
+	<page name="welcome">
+      <templates>
+          <template file-name="/plugins/{your-plugin-name-here}/jsp/mstrWeb_ProjectPage.jsp"/>
+      </templates>
+    </page>
+  </pages>
+</framework>
