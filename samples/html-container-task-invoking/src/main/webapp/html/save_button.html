@@ -1,0 +1,25 @@
+<img src="../images/<your-path-here>/Save_button.png" id="save" />
+
+<script>
+document.getElementById("save").addEventListener("click", function(){
+
+var taskProcUrl = "http://localhost:8080/MicroStrategy/servlet/taskProc";
+var xhr = new XMLHttpRequest();
+xhr.open('POST', taskProcUrl);
+xhr.onreadystatechange = function () {
+        if (xhr.readyState > 3)
+            if (xhr.status == 200) {
+                alert("task invoked successfully");
+            } else if (xhr.getResponseHeader("X-MSTR-TaskErrorCode") == 401) {
+                alert("auth error");
+            } else {
+                alert("task invocation failed");
+            }
+    };
+
+var formData = new FormData();
+formData.append("taskID", "<your-task-name-here>");
+xhr.send(formData);
+
+});
+</script>
