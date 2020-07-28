@@ -1,0 +1,8 @@
+<shortcut-list-set name="folderContextMenus">
+  <shortcut-list name="default">
+    <!-- The name which appears is the desc, onclick can be your custom JS code -->
+    <shortcut append-state="false" desc="New Folder Specific Context Menu" name="newContextMenu"
+              builder-class-name="transforms.FolderContextMenuTransform"
+              onclick="start('@oid@');"/>
+  </shortcut-list>
+</shortcut-list-set>
